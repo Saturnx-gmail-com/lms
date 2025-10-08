@@ -18,12 +18,12 @@ services:
 
   frappe:
     image: frappe/bench:latest
-    command: bash ../../workspace/docker/init.sh
+    command: ls /workspace > echo
     environment:
       - SHELL=/bin/bash
     working_dir: /home/frappe
     volumes:
-      - .:/workspace
+      - .:/home/frappe/workspace
     ports:
       - 8000:8000
       - 9000:9000
