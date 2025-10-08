@@ -38,18 +38,18 @@ services:
         sed -i "/redis/d" ./Procfile;
         sed -i "/watch/d" ./Procfile;
 
-        bench get-app lms https://github.com/seuusuario/lms.git;
+        bench get-app lms
 
-        bench new-site lms.localhost \
+        bench new-site academy.fasterisk.com.br \
           --force \
           --mariadb-root-password 123 \
           --admin-password admin \
           --no-mariadb-socket;
 
-        bench --site lms.localhost install-app lms;
-        bench --site lms.localhost set-config developer_mode 1;
-        bench --site lms.localhost clear-cache;
-        bench use lms.localhost;
+        bench --site academy.fasterisk.com.br install-app lms;
+        bench --site academy.fasterisk.com.br set-config developer_mode 1;
+        bench --site academy.fasterisk.com.brclear-cache;
+        bench use academy.fasterisk.com.br;
         bench start;
        fi
       '
