@@ -22,7 +22,7 @@ services:
       bash -c '
       set -e;
       if [ -d "/home/frappe/frappe-bench/apps/frappe" ]; then
-        echo "✅ Bench already exists, skipping init";
+        echo "Bench already exists, skipping init";
         cd /home/frappe/frappe-bench;
         bench start;
       else
