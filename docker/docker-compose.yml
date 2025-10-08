@@ -18,7 +18,7 @@ services:
 
   frappe:
     image: frappe/bench:latest
-	command: bench start
+    command: bench start
     environment:
       - SHELL=/bin/bash
     working_dir: /home/frappe
